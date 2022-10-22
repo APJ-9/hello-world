@@ -1,9 +1,11 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import PortfolioList from '../portfolioList/PortfolioList';
 import './Portfolio.css'
+import {featuredPortfolio,webPortfolio,mobilePortfolio,designPortfolio,contentPortfolio} from '../../data'
 
 function Portfolio() {
   const [selected, setSelected] = useState('featured')
+  const [ourData, setOurData] = useState([])
     const list = [
         {
           id: "featured",
@@ -26,6 +28,31 @@ function Portfolio() {
           title: "Content",
         },
       ];
+
+      useEffect(()=>{
+
+        switch(selected){
+          case 'featured':
+            setOurData(featuredPortfolio)
+            break
+          case 'web':
+            setOurData(webPortfolio)
+            break
+          case 'mobile':
+            setOurData(mobilePortfolio)
+            break
+          case 'design':
+            setOurData(designPortfolio)
+            break
+          case 'content':
+            setOurData(contentPortfolio)
+            break
+          default:
+            setOurData(featuredPortfolio)
+        }
+
+      },[selected])
+    
   return (
     <div className='portfolio' id='portfolio'>
         <h1>Portfolio</h1>
@@ -37,9 +64,15 @@ function Portfolio() {
             }
         </ul>
         <div className="container">
-            <div className="item">
-
-            </div>
+            {
+              ourData.map((data)=>(
+                <div className="item">
+                  <img src={data.img} alt="" />
+                  <h3>{data.title} </h3>
+                </div>
+              ))
+            }
+            
         </div>
     </div>
   )
