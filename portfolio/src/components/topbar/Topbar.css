@@ -1,8 +1,82 @@
 .topbar {
     width: 100%;
     height: 70px;
-    background-color: #15023a;
+    background-color: white;
+    color: var(--main-color);
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 3;
+    transition: all 1s ease;
+}
+
+.topbar.active {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.topbar .wrapper {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topbar .left {
+    display: flex;
+}
+
+.topbar .itemContainer {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.topbar .left .logo {
+    font-size: 40px;
+    font-weight: 700;
+    text-decoration: none;
+    color: inherit;
+    margin-right: 40px;
+}
+
+.topbar .itemContainer svg {
+    fill: var(--main-color);
+    width: 25px;
+    margin-right: 5px;
+}
+
+.topbar.active .itemContainer svg {
+    fill: white;
+}
+
+.topbar .right .hamburger {
+    height: 25px;
+    width: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.topbar.active .hamburger span:first-child {
+    background-color: white;
+    transform: rotate(45deg);
+}
+
+.topbar.active .hamburger span:last-child {
+    background-color: white;
+    transform: rotate(-45deg);
+}
+
+.topbar.active .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+.topbar .right .hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--main-color);
+    transform-origin: left;
+    transition: all 2s ease;
 }

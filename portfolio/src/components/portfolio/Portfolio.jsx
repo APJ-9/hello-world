@@ -1,10 +1,10 @@
 import React from 'react'
-import './Portfolio'
+import './Portfolio.css'
 
 function Portfolio() {
   return (
-    <div className='portfolio'>
-        
+    <div className='portfolio' id='portfolio'>
+
     </div>
   )
 }

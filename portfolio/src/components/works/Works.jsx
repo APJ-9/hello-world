@@ -1,10 +1,10 @@
 import React from 'react'
-import './Works'
+import './Works.css'
 
 function Works() {
   return (
-    <div className='works'>
-        
+    <div className='works' id='works'>
+
     </div>
   )
 }
