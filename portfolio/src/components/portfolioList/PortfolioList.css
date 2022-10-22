@@ -1,0 +1,14 @@
+/* .portfolioList {} */
+
+.portfolioList li {
+    font-size: 14px;
+    margin-right: 50px;
+    padding: 7px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.portfolioList li.active {
+    background-color: var(--main-color);
+    color: white;
+}
