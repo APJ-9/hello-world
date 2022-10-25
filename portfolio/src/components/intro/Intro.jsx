@@ -10,7 +10,7 @@ function Intro() {
              { showCursor: true, 
                 backDelay:1500,
                 backSpeed:60,
-                strings: ['Photographer','Developer' ] })
+                strings: ['Photographer','Web-Developer','Web-Designer' ] })
 
       return () => {
         
@@ -28,7 +28,7 @@ function Intro() {
             <div className="wrapper">
                 <h2>Hi There, I'm</h2>
                 <h1>Akhil P Jose</h1>
-                <h3> Freelance <span ref={textRef}> </span></h3>
+                <h3> I'm a <span ref={textRef}> </span></h3>
             </div>
             <a href="#portfolio">
                 <img src="assets/down.png" alt="" />
