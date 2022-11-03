@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.container {
+    display: flex;
+}
+
+.button {
+    width: 40px;
+    height: 40px;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.hrhr {
+    color: white;
+    padding-left: 100px;
+}
+
+
+.button:hover {
+    background-color: red;
+}
+
+.button:hover+.hrhr {
+    color: red;
+}
